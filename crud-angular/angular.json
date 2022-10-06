@@ -8,9 +8,6 @@
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
-        },
-        "@schematics/angular:application": {
-          "strict": true
         }
       },
       "root": "",
@@ -107,5 +104,7 @@
       }
     }
   },
-  "defaultProject": "crud-angular"
+  "cli": {
+    "analytics": "22eaedc1-9c22-4cf1-893a-c5903d1fa5eb"
+  }
 }
