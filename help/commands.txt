@@ -1,2 +1,4 @@
 ng g m courses --routing
 ng g c courses/courses
+
+ng g c courses/courses
