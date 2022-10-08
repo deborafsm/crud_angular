@@ -6,7 +6,7 @@ import { Course } from '../model/course';
   styleUrls: ['./courses.component.scss'],
 })
 export class CoursesComponent implements OnInit {
-  courses: Course[] = [{ _id: '1', name: 'React', category: 'Front-End' }];
+  courses: Course[] = [{ _id: '1', name: 'React', category: 'Front-End' },{ _id: '3', name: 'Java', category: 'Back-End' }];
   displayedColumns = ['name', 'category'];
 
   constructor() {
