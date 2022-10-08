@@ -1,5 +1,9 @@
 ng g m courses --routing
 ng g c courses/courses
-ng g interface courses/model/course
+
 /**Adicionar components**/
 courses.modules.ts -> importar -> adicionar no array "imports"
+/**Criar uma interface**/
+ng g interface courses/model/course
+/**Data sourse course for table**/
+course.components.ts
