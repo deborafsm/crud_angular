@@ -9,3 +9,5 @@ ng g interface courses/model/course
 course.components.ts
 /*Colocar todos modulos em um lugar só */
  ng g m shared/app-material
+ /*criar um service*/
+ ng g s courses/services/courses
