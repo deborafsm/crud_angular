@@ -11,3 +11,6 @@ course.components.ts
  ng g m shared/app-material
  /*criar um service*/
  ng g s courses/services/courses
+ /*Array*/
+ courses: Course[] = []
+ this.coursesService.list().subcribe(courses =>this.courses = courses)
