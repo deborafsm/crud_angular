@@ -7,3 +7,5 @@ courses.modules.ts -> importar -> adicionar no array "imports"
 ng g interface courses/model/course
 /**Data sourse course for table**/
 course.components.ts
+/*Colocar todos modulos em um lugar só */
+ ng g m shared/app-material
