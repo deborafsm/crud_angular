@@ -1,5 +1,15 @@
+m - modulos
+c - components 
+ng - cria uma pasta de espaço de trabalho 
+Angular e gera um novo esqueleto de aplicativo. Uma área de trabalho pode conter vários aplicativos e bibliotecas.
+ng g - Gera e/ou modifica arquivos com base em um esquema. ng gerar <esquema>. ng g <esquema>. Este comando tem os seguintes comandos:
 ng g m courses --routing
 ng g c courses/courses
+
+DECLARATIONS - import  components
+IMPORTS - import  modules
+
+
 
 /**Adicionar components**/
 courses.modules.ts -> importar -> adicionar no array "imports"
@@ -19,3 +29,4 @@ course.components.ts
 first(), 
 = ultiliza resp e finaliza 
 take(1),
+
