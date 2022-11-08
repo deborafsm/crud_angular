@@ -6,8 +6,11 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
 
 @NgModule({
+
   exports: [
     MatTableModule,
     MatCardModule,
@@ -15,6 +18,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatProgressSpinnerModule,
     MatDialogModule,
     MatButtonModule,
+    MatIconModule,
+    MatInputModule
   ],
 })
 export class AppMaterialModule {}

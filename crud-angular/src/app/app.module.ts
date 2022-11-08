@@ -8,6 +8,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material/input';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -16,7 +17,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatInputModule,
-    HttpClientModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent],
