@@ -1,5 +1,6 @@
 package com.debora.spring_crud.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -23,6 +24,9 @@ public class Course {
     // Incrementa o ID automaticamente pelo bd
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    // Column tem várias propriedades das demais colunas no banco de dados, como
+    // nome, tamanho maximo para o dado etc
+    @Column(name = "nome")
     private String name;
     private String category;
 
