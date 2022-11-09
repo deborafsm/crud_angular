@@ -24,10 +24,12 @@ public class Course {
     // Incrementa o ID automaticamente pelo bd
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    // Column tem várias propriedades das demais colunas no banco de dados, como
+    // A ANOTATION Column tem várias propriedades para colunas do banco de dados, como
     // nome, tamanho maximo para o dado etc
-    @Column(name = "nome")
+    @Column(length = 200, nullable = false)
     private String name;
+
+    @Column(length = 10, nullable = false)
     private String category;
 
 }
