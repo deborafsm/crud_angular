@@ -1,4 +1,4 @@
-package com.debora.spring_crud.controller;
+package com.debora.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

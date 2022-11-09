@@ -1,4 +1,4 @@
-package com.debora.spring_crud.model;
+package com.debora.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

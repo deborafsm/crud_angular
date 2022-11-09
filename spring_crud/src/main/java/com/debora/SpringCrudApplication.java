@@ -1,12 +1,12 @@
-package com.debora.spring_crud;
+package com.debora;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import com.debora.spring_crud.model.Course;
-import com.debora.spring_crud.repository.CourseRepository;
+import com.debora.model.Course;
+import com.debora.repository.CourseRepository;
 
 @SpringBootApplication
 public class SpringCrudApplication {
@@ -23,8 +23,12 @@ public class SpringCrudApplication {
 			Course c = new Course();
 			c.setName("Angular");
 			c.setCategory("Front-end");
-			courseRepository.save(new Course());
+			Course c1 = new Course();
+			c1.setName("Spring");
+			c1.setCategory("Back-end");
+			courseRepository.save(c);
+			courseRepository.save(c1);
 		};
-		
+
 	}
 }

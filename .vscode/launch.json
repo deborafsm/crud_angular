@@ -8,6 +8,13 @@
             "type": "java",
             "name": "Launch SpringCrudApplication",
             "request": "launch",
+            "mainClass": "com.debora.SpringCrudApplication",
+            "projectName": "spring_crud"
+        },
+        {
+            "type": "java",
+            "name": "Launch SpringCrudApplication",
+            "request": "launch",
             "mainClass": "com.debora.spring_crud.SpringCrudApplication",
             "projectName": "spring_crud"
         },
