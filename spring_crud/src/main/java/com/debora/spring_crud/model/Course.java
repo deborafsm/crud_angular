@@ -1,6 +1,9 @@
 package com.debora.spring_crud.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.Data;
@@ -15,7 +18,10 @@ import lombok.Setter;
 // @Table(name = "course")
 @Entity
 public class Course {
-
+    // Diz que é chave primaria
+    @Id
+    // Incrementa o ID automaticamente pelo bd
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
     private String category;
