@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,10 +21,14 @@ import lombok.Setter;
 // @Table(name = "course")
 @Entity
 public class Course {
+    
     // Diz que é chave primaria
     @Id
     // Incrementa o ID automaticamente pelo bd
     @GeneratedValue(strategy = GenerationType.AUTO)
+    // nome que quero utilizar no json
+   // nome que quero utilizar no json
+   @JsonProperty("_id")
     private Long id;
     // A ANOTATION Column tem várias propriedades para colunas do banco de dados, como
     // nome, tamanho maximo para o dado etc
