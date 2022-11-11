@@ -16,7 +16,7 @@ export class CoursesComponent implements OnInit {
   // coursesService: CoursesService;
   constructor(
     public dialog: MatDialog,
-    private coursesService: CoursesService
+    private coursesService: CsoursesService
   ) {
     this.courses$ = this.coursesService.list().pipe(
       catchError((error) => {
