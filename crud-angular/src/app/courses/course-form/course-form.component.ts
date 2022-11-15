@@ -14,6 +14,7 @@ export class CourseFormComponent implements OnInit {
       category: [null],
     });
   }
-
+  onCancel() {}
+  onSubmit() {}
   ngOnInit(): void {}
 }
