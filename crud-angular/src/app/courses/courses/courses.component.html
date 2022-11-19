@@ -2,7 +2,7 @@
   <mat-toolbar color="primary">
     <span>Title</span>
   </mat-toolbar>
-  <div class="mat-elevation-z8">
+  <div class="mat-elevation-z8 column-flex">
 
     <app-courses-list *ngIf="courses$ | async as courses  else loading " [courses]="courses"></app-courses-list>
     <ng-template #loading>

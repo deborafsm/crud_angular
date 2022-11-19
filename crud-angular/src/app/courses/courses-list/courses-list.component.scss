@@ -1,3 +1,13 @@
-table {
+mat-table {
   width: 100%;
+  overflow: auto;
+  max-height: 500px;
 }
+
+// .action-collum {
+//   flex: 0 0 75px;
+// }
+
+// .action-collum-header {
+//   flex: 0 0 55px;
+// }
