@@ -21,6 +21,6 @@ export class CoursesListComponent implements OnInit {
     // this.router.navigate(['new'], { relativeTo: this.route });
   }
   onEdit(course: Course){
-    this.edit.emit(true);
+    this.edit.emit(course);
   }
 }
