@@ -21,7 +21,7 @@
     <!-- Editar -->
     <mat-cell *matCellDef="let course">
       <button mat-mini-fab color="primary" aria-label="Editar um Curso">
-        <mat-icon>edit</mat-icon>
+        <mat-icon (click)="onEdit(course)">edit</mat-icon>
       </button>
 
       <button mat-icon-button color="warn" aria-label="Remover um Curso">
