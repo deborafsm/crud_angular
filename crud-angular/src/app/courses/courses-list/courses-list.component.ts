@@ -11,11 +11,16 @@ export class CoursesListComponent implements OnInit {
   displayedColumns = ['name', 'category', 'actions'];
   @Input() courses: Course[] = [];
   @Output() add = new EventEmitter(false);
+  @Output() edit = new EventEmitter(false);
+
   constructor() {}
 
   ngOnInit(): void {}
   onAdd() {
     this.add.emit(true);
     // this.router.navigate(['new'], { relativeTo: this.route });
+  }
+  onEdit(course: Course){
+    this.edit.emit(true);
   }
 }
