@@ -34,3 +34,5 @@ take(1),
 /*INICIAR O PROJETO*/
 --> POR CAUSA DO PROXY-CONFIG (erro cors)
 npm run start 
+
+/*ng r */
