@@ -35,4 +35,5 @@ take(1),
 --> POR CAUSA DO PROXY-CONFIG (erro cors)
 npm run start 
 
-/*ng r */
+/*ng resolver*/
+ ng g resolver guards/course        
