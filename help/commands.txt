@@ -37,3 +37,6 @@ npm run start
 
 /*ng resolver*/
  ng g resolver guards/course        
+
+
+ teste
