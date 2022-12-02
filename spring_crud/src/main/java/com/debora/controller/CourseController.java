@@ -53,6 +53,7 @@ public class CourseController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
+    // Edit
     @PutMapping("/{id}")
     public ResponseEntity<Course> update(@PathVariable Long id,
             @RequestBody Course course) {
@@ -66,14 +67,15 @@ public class CourseController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
+    // Delete
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> delete(@PathVariable Long id) {
         return courseRepository.findById(id)
-        .map(recordFound -> {
-          courseRepository.deleteById(id);
-          return ResponseEntity.noContent().<Void>build();
-        })
-        .orElse(ResponseEntity.notFound().build());
+                .map(recordFound -> {
+                    courseRepository.deleteById(id);
+                    return ResponseEntity.noContent().<Void>build();
+                })
+                .orElse(ResponseEntity.notFound().build());
     }
 
 }
