@@ -35,4 +35,9 @@ export class CoursesService {
       .put<Course>(`${this.API}/${record._id}`, record)
       .pipe(first());
   }
+  rempve(id: string){
+    return this.httpClient
+    .delete<Course>(`${this.API}/${record._id}`, record)
+    .pipe(first());
+}
 }
