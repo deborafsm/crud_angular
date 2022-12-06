@@ -12,6 +12,7 @@ export class CoursesListComponent implements OnInit {
   @Input() courses: Course[] = [];
   @Output() add = new EventEmitter(false);
   @Output() edit = new EventEmitter(false);
+  @Output() remove = new EventEmitter(false);
 
   constructor() {}
 
@@ -20,7 +21,10 @@ export class CoursesListComponent implements OnInit {
     this.add.emit(true);
     // this.router.navigate(['new'], { relativeTo: this.route });
   }
-  onEdit(course: Course){
+  onEdit(course: Course) {
     this.edit.emit(course);
+  }
+  onDelete(course: Course) {
+    this.remove.emit(course);
   }
 }
