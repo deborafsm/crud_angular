@@ -13,7 +13,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./courses.component.scss'],
 })
 export class CoursesComponent implements OnInit {
-  courses$: Observable<Course[]>;
+  courses$: Observable<Course[]> | null = null;
   displayedColumns = ['name', 'category', 'actions'];
   // coursesService: CoursesService;
   constructor(
@@ -23,6 +23,11 @@ export class CoursesComponent implements OnInit {
     private route: ActivatedRoute,
     private _snackBar: MatSnackBar
   ) {
+    this.refresh();
+    // this.courses = [];
+    // this.coursesService = new CoursesService();
+  }
+  refresh() {
     this.courses$ = this.coursesService.list().pipe(
       catchError((error) => {
         console.log(error);
@@ -30,8 +35,6 @@ export class CoursesComponent implements OnInit {
         return of([]);
       })
     );
-    // this.courses = [];
-    // this.coursesService = new CoursesService();
   }
   onError(errorMsg: string) {
     this.dialog.open(ErrorDialogComponent, {
@@ -46,12 +49,16 @@ export class CoursesComponent implements OnInit {
     this.router.navigate(['edit', course._id], { relativeTo: this.route });
   }
   onDelete(course: Course) {
-    this.coursesService.remove(course._id).subscribe(() => {
-      this._snackBar.open('Curso remnovido com sucesso!', 'x', {
-        duration: 3000,
-        verticalPosition: 'top',
-        horizontalPosition: 'center',
-      });
-    });
+    this.coursesService.remove(course._id).subscribe(
+      () => {
+        this.refresh();
+        this._snackBar.open('Curso remnovido com sucesso!', 'x', {
+          duration: 3000,
+          verticalPosition: 'top',
+          horizontalPosition: 'center',
+        });
+      },
+      (error) => this.onError('Erro ao tentar remover curso.')
+    );
   }
 }
